@@ -1,4 +1,6 @@
+//Dynamic value: here we made variables function inside JS with the help of { } curely braces in JSX
 export const App = () => {
+ 
   return (
       <>
         <NetflixSeries />
@@ -12,22 +14,28 @@ export const App = () => {
 
 // NetflixSeries is a Component not a Function
 const NetflixSeries = () => {
+
+  const naam = "Love Alarm";
+  const season = "2";
+  const rating = "6.6";
+  const summary = "Love Alarm is the first Korean drama series confirmed for pick-up by Netflix";
+
+  const returnGenre = () => {
+    const genre = "Romantic & Commedy";
+    return genre;
+  }
+  
   return (
     <div> 
     <div>
           <img src="Love_Alarm.jpg"/>
         </div>
         <div>
-          <h2>Name: Love Alarm</h2>
-          <h3>Seasons: 2</h3>
-          <h3>Rating: 6.6</h3>
-          <p>
-           Summary: Love Alarm is the first Korean drama series confirmed for pick-up by Netflix. The first 
-           season of the series was released on Netflix on August 22, 2019. It was ranked as one of Netflix's 
-           top releases and was renewed for a second season in October 2019; season 2 was released on March 12,
-            2021. In 2021, the series managed to rank as the 6th most watched K-dramas worldwide in the platform. 
-            In 2022, it was the ninth most searched Korean drama worldwide.
-           </p>
+          <h2>Naam: {naam} </h2>
+          <h3>Seasons: {season} </h3>
+          <h3>Rating: {3 + 3.2} </h3>
+          <p>Summary: {summary}</p>
+          <p>Genre: {returnGenre()} </p>
         </div>
         </div>
   )
