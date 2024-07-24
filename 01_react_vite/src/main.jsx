@@ -8,6 +8,6 @@ import { Practice } from './Practice'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    <Practice />
+    {/* <Practice /> */}
   </React.StrictMode>,
 );
