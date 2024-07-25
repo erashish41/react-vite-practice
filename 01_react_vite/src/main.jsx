@@ -4,10 +4,12 @@ import { App } from './App.jsx'
 
 import './index.css'
 import { Practice } from './Practice'
+import Profile from './components/Profile.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <Profile />
     {/* <Practice /> */}
   </React.StrictMode>,
 );
