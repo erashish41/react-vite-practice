@@ -1,17 +1,18 @@
-export const SeriesList = (props) => {
-    console.log(props);
+export const SeriesList = ({data}) => {
+    // console.log(props);
+    const { imdbid, imageurl, title, type, released, imdbrating, genre } = data;     // means we have destructure here
 
     return (                                 
-        <li key={props.currElem.imdbid}>             {/* // You need to give each array item a key — a string or a number that uniquely identifies it among other items in that array: */}
+        <li >             {/* // You need to give each array item a key — a string or a number that uniquely identifies it among other items in that array: */}
          <div>
-           <img src= {props.currElem.imageurl}/>
+           <img src= {imageurl}/>
          </div>
          <div>
-           <h2>Original Title: {props.currElem.title}</h2>
-           <h3>Content Type: {props.currElem.type} </h3>
-           <h3>release_date: {props.currElem.released} </h3>
-           <h3>rating: {props.currElem.imdbrating} </h3>
-           <h3>genres: {props.currElem.genre}</h3>
+           <h2>Original Title: {title}</h2>
+           <h3>Content Type: {type} </h3>
+           <h3>release_date: {released} </h3>
+           <h3>rating: {imdbrating} </h3>
+           <h3>genres: {genre}</h3>
            <a href="https://www.google.com/">
            <button>Watch now</button>
            </a>
