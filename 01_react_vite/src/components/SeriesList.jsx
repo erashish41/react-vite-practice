@@ -13,7 +13,7 @@ export const SeriesList = ({data}) => {
            <h3>release_date: {released} </h3>
            <h3>rating: {imdbrating} </h3>
            <h3>genres: {genre}</h3>
-           <a href="https://www.google.com/">
+           <a href="https://www.netflix.com/in/">
            <button>Watch now</button>
            </a>
          </div>

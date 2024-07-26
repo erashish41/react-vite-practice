@@ -8,12 +8,11 @@
 
 
 import seriesData from '../api/seriesData.json'
-
 import { SeriesList } from './SeriesList';
 
   const NetflixSeries = () => {
     return (
-      <ul>
+      <ul className='grid grid-three-cols'>
          {seriesData.map((currElem) => {
           return  <SeriesList key={currElem.imdbid} data={currElem} />
          })}    

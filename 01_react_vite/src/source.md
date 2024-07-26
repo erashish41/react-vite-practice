@@ -1,3 +1,13 @@
+1.index.html
+2.main.jsx
+3.App.jsx
+4.Netflix.jsx
+5.SeriesList.jsx
+6.seriesData.json
+7.Profile.jsx
+Practice.jsx
+source.md
+
 1.React does not render `false`, `null`, `undefned`, or `NaN` in the Dom. These values, when used in JSX, 
     will  result in nothing being displayed.
 
@@ -21,7 +31,7 @@ c. named Import: when importing named exports, the import names must match the e
 
 
 
-d. In NetflixSeries.jsx: -
+7. In NetflixSeries.jsx: -
 - NetflixSeries is a Component not a Function
     - key and currElem are props which are passed in it
     - currElem itself represents each element in the seriesData array, so using currElem[0] 
@@ -33,7 +43,12 @@ d. In NetflixSeries.jsx: -
 -  You need to give each array item a key — a string or a number that uniquely identifies it among other items in that array
  e.g - <li key={person.id}>...</li>
 
- e. map method
+a. Destructuring
+- is the syntax for extracting values from an object property and assigning them to a variable. 
+- we can destructure object as well as Array also
+- it is used to unpack the value from the source(variable) to vairable.
+
+ b. map method
  const listItems = chemists.map(person => { // Curly brace
   return <li>...</li>;
 });
@@ -43,12 +58,12 @@ seriesData.map(currElem) => {
          }
 - when we create map method dont describe it there, always describe in other different component
 
-f. Props(properties) 
+c. Props(properties) 
 - in react props are used to transfer data from parent to child component and vice versa
 - Porps are immutable, child compnent cant modify the data recevied from parent component 
 - means we have destructure the props
 - You need to give each array item a key — a string or a number that uniquely identifies it among other items in that array
 
-g. Passing JSX as props: In this file we have fetch the data from parent to child and farther passing JSX 
+d. Passing JSX as props: In this file we have fetch the data from parent to child and farther passing JSX 
     from child it means passing JSX as props
 - to fetch the data from parent to children just do {children} or {props.children} -- Profile.jsx
