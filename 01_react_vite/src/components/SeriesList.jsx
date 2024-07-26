@@ -3,11 +3,11 @@ export const SeriesList = ({data}) => {
     const { imdbid, imageurl, title, type, released, imdbrating, genre } = data;     // means we have destructure here
 
     return (                                 
-        <li >             {/* // You need to give each array item a key — a string or a number that uniquely identifies it among other items in that array: */}
+        <li className="card" >             {/* // You need to give each array item a key — a string or a number that uniquely identifies it among other items in that array: */}
          <div>
            <img src= {imageurl}/>
          </div>
-         <div>
+         <div className="card-content">
            <h2>Original Title: {title}</h2>
            <h3>Content Type: {type} </h3>
            <h3>release_date: {released} </h3>
