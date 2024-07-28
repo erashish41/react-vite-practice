@@ -72,28 +72,32 @@ d. Passing JSX as props: In this file we have fetch the data from parent to chil
 
 
 8.CSS styling
-- inline css style are specified using JS object { }.
-- <h2 style={{margin: "1.2rem 0"}}>Original Title: {title}</h2>
+- a. inline css style are specified using JS object { }.
+-    <h2 style={{margin: "1.2rem 0"}}>Original Title: {title}</h2>
 
-- inline css can't use directly in JSX to avoid this we have to define outside of render method
-- const btn_style = {
+- b. inline css can't use directly in JSX to avoid this we have to define outside of render method
+-    const btn_style = {
       padding: "1.2rem 2.4rem",
       border: "none",
       fontSize: "1.6rem",
       backgroundColor: "var( --bnt-hover-bg-color)",
       color: "var(--bg-color)",
-    }
+}
 
-- property name are writen in camelCase.
-const style = {
+- c. property name are writen in camelCase.
+    const style = {
     backgroundColor : 'blue',
     fontSize : '20px',
 }
 
-- for numerial value we have to use as string property
-- and it take direct value as zIndex
-const style = {
-    padding: '10px',
-    zIndex: 1,
-
+- d. for numerial value we have to use as string property
+-    and it take direct value as zIndex
+    const style = {
+        padding: '10px',
+        zIndex: 1,
 }
+
+e. Conditional styling for Dynamic UI
+-  we can se Ternary Operator to add conditional stylings to our CSS
+- make seperate method to render it, name as ratingClass
+    <h3>Rating: <span  className = {`rating ${ratingClass}`} >{rating}</span></h3>
