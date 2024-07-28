@@ -8,6 +8,8 @@
 Practice.jsx
 source.md
 
+In a React application, the ReactDOM.createRoot method is used to create a root container for your React components.
+
 1.React does not render `false`, `null`, `undefned`, or `NaN` in the Dom. These values, when used in JSX, 
     will  result in nothing being displayed.
 
@@ -31,7 +33,7 @@ c. named Import: when importing named exports, the import names must match the e
 
 
 
-7. In NetflixSeries.jsx: -
+7.In NetflixSeries.jsx: -
 - NetflixSeries is a Component not a Function
     - key and currElem are props which are passed in it
     - currElem itself represents each element in the seriesData array, so using currElem[0] 
@@ -67,3 +69,31 @@ c. Props(properties)
 d. Passing JSX as props: In this file we have fetch the data from parent to child and farther passing JSX 
     from child it means passing JSX as props
 - to fetch the data from parent to children just do {children} or {props.children} -- Profile.jsx
+
+
+8.CSS styling
+- inline css style are specified using JS object { }.
+- <h2 style={{margin: "1.2rem 0"}}>Original Title: {title}</h2>
+
+- inline css can't use directly in JSX to avoid this we have to define outside of render method
+- const btn_style = {
+      padding: "1.2rem 2.4rem",
+      border: "none",
+      fontSize: "1.6rem",
+      backgroundColor: "var( --bnt-hover-bg-color)",
+      color: "var(--bg-color)",
+    }
+
+- property name are writen in camelCase.
+const style = {
+    backgroundColor : 'blue',
+    fontSize : '20px',
+}
+
+- for numerial value we have to use as string property
+- and it take direct value as zIndex
+const style = {
+    padding: '10px',
+    zIndex: 1,
+
+}

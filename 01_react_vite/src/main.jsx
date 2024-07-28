@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { App } from './App.jsx'
 import './index.css'
 
+
 import { Practice } from './Practice'
 import Profile from './components/Profile.jsx'
 
