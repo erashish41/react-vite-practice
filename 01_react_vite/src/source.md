@@ -105,11 +105,34 @@ e. Conditional styling for Dynamic UI
 f. Css Modules in react: Scope and Reusable styles
 - Css modules are used for particular/specific component that is used in it
  file can be:- module.css
-    import style from './NetflixSeries.module.css'
+    import './NetflixSeries.module.css'
 - import css module file in our React component
 - when we use css models and we give className in it,  the value will change and make it unique.
 - when import css modude file, it will access class name as properties of imported styles object.
 - when we use multiple className than template literals { `` } are used
-- things which are not accessable (like hyphens - ) by . notation we have to use bracket notation [ ] for 
-    className with hyphens  
+- things which are not accessable (like hyphens - ) by . notation we have to use bracket notation 
+    [ ] for className with hyphens  
     <div className={style[card-content]}>
+
+g. Styled Components (SC) in React for Clean and Dynamic UI
+- firstly we have to download styled component from npm site, we can use bun instead of npm
+    bun i styled-components  (npm i styled-components)
+    then check in package.json that there is a version of SC is avilable or not
+    like:-
+         "dependencies": {
+            "react": "^19.0.0-rc-512b09b2-20240718",
+            "react-dom": "^19.0.0-rc-512b09b2-20240718",
+            "styled-components": "^6.1.12"
+        },
+- we have to import with style from file name as given
+    import style from './NetflixSeries.module.css'
+- SC have to way to write the code 
+    a. Templete Literals:                                 b. Style objects:
+    a. const Button = styled.button`                      b. const Button = styled.button({
+            color: grey;                                             color: 'grey',
+            `;                                                          });
+    style is object provided by the library and button is method for calling
+    button is TagName like (h1, p, a, li, ul, button, img, etc)
+    we make the component of same TagName
+- SC allow you to write actual CSS code to style your components
+
