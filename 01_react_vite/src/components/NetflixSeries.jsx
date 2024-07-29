@@ -8,7 +8,7 @@
 
 import seriesData from '../api/seriesData.json'
 import { SeriesList } from './SeriesList'
-import '../components/NetflixSeries.css'
+
 
   const NetflixSeries = () => {
     return (

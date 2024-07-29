@@ -57,6 +57,11 @@ h1, h2, h3, h4, h5, h6{
   font-family: "Poppins", sans-serif;
   font-weight: 2rem;
 }
+p{
+  color: var(--heading-color);
+  font-family: "Poppins", sans-serif;
+  font-weight: 2rem;
+}
 h1{
   font-size: 3.2;
 }
@@ -79,4 +84,13 @@ h1{
   border: #242424;
   border-radius: 100px;
 }
-
+.card-content{
+  padding: 3.2rem 1.2rem; 
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.card-heading{
+  margin-bottom: 3.2rem;
+  font-size: 30px;
+}

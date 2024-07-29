@@ -101,3 +101,15 @@ e. Conditional styling for Dynamic UI
 -  we can se Ternary Operator to add conditional stylings to our CSS
 - make seperate method to render it, name as ratingClass
     <h3>Rating: <span  className = {`rating ${ratingClass}`} >{rating}</span></h3>
+
+f. Css Modules in react: Scope and Reusable styles
+- Css modules are used for particular/specific component that is used in it
+ file can be:- module.css
+    import style from './NetflixSeries.module.css'
+- import css module file in our React component
+- when we use css models and we give className in it,  the value will change and make it unique.
+- when import css modude file, it will access class name as properties of imported styles object.
+- when we use multiple className than template literals { `` } are used
+- things which are not accessable (like hyphens - ) by . notation we have to use bracket notation [ ] for 
+    className with hyphens  
+    <div className={style[card-content]}>

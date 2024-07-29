@@ -1,7 +1,8 @@
 //Dynamic value: here we made variables function inside JS with the help of { } curely braces in JSX
 
-import NetflixSeries from "./components/NetflixSeries"
-
+import NetflixSeries from "./components/NetflixSeries";
+import "./components/NetflixSeries.module.css";
+ 
 
 export const App = () => {
     return (
@@ -11,4 +12,3 @@ export const App = () => {
       </section>
     )
 }
-

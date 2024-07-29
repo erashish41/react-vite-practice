@@ -10,16 +10,6 @@
     "watch_url": "https://www.viki.com/tv/40466c-lovely-runner"
   },
   {
-    "title": "Stranger Things",
-    "id": "stranger-things",
-    "img_url": "http://localhost:5173/stranger-things.avif",
-    "rating": "8.7",
-    "description": "A group of young friends witness supernatural forces and secret government exploits.",
-    "cast": ["Winona Ryder", "David Harbour", "Millie Bobby Brown"],
-    "genre": ["Drama", "Fantasy", "Horror"],
-    "watch_url": "https://www.netflix.com/title/80057281"
-  },
-  {
     "title": "The Witcher",
     "id": "the-witcher",
     "img_url": "http://localhost:5173/tww.jpg",
@@ -68,5 +58,15 @@
     "cast": ["Kim Soo Hyun", "Kim Ji Won"],
     "genre": ["Drama", "Romance"],
     "watch_url": "https://www.viki.com/tv/23456789c-queen-of-tears"
+  },
+  {
+    "title": "Stranger Things",
+    "id": "stranger-things",
+    "img_url": "http://localhost:5173/stranger-things.avif",
+    "rating": "8.7",
+    "description": "A group of young friends witness supernatural forces and secret government exploits.",
+    "cast": ["Winona Ryder", "David Harbour", "Millie Bobby Brown"],
+    "genre": ["Drama", "Fantasy", "Horror"],
+    "watch_url": "https://www.netflix.com/title/80057281"
   }
 ]
