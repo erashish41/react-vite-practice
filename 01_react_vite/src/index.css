@@ -84,13 +84,3 @@ h1{
   border: #242424;
   border-radius: 100px;
 }
-.card-content{
-  padding: 3.2rem 1.2rem; 
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-.card-heading{
-  margin-bottom: 3.2rem;
-  font-size: 30px;
-}

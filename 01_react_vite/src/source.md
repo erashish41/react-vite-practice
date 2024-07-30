@@ -97,12 +97,12 @@ d. Passing JSX as props: In this file we have fetch the data from parent to chil
         zIndex: 1,
 }
 
-e. Conditional styling for Dynamic UI
+9.Conditional styling for Dynamic UI
 -  we can se Ternary Operator to add conditional stylings to our CSS
 - make seperate method to render it, name as ratingClass
     <h3>Rating: <span  className = {`rating ${ratingClass}`} >{rating}</span></h3>
 
-f. Css Modules in react: Scope and Reusable styles
+Css Modules in react: Scope and Reusable styles
 - Css modules are used for particular/specific component that is used in it
  file can be:- module.css
     import './NetflixSeries.module.css'
@@ -114,7 +114,7 @@ f. Css Modules in react: Scope and Reusable styles
     [ ] for className with hyphens  
     <div className={style[card-content]}>
 
-g. Styled Components (SC) in React for Clean and Dynamic UI
+10.Styled Components (SC) in React for Clean and Dynamic UI
 - firstly we have to download styled component from npm site, we can use bun instead of npm
     bun i styled-components  (npm i styled-components)
     then check in package.json that there is a version of SC is avilable or not
@@ -126,6 +126,7 @@ g. Styled Components (SC) in React for Clean and Dynamic UI
         },
 - we have to import with style from file name as given
     import style from './NetflixSeries.module.css'
+- we can write the code with both Templete Literals and Styled Component
 - SC have to way to write the code 
     a. Templete Literals:                                 b. Style objects:
     a. const Button = styled.button`                      b. const Button = styled.button({
@@ -133,6 +134,17 @@ g. Styled Components (SC) in React for Clean and Dynamic UI
             `;                                                          });
     style is object provided by the library and button is method for calling
     button is TagName like (h1, p, a, li, ul, button, img, etc)
-    we make the component of same TagName
-- SC allow you to write actual CSS code to style your components
+    we have to make the component of same TagName
+- Style object allow you to write actual CSS code to style your components
+- In SC, we can pass a function within the template literal dynamicaly set Css properties based
+     on props or state
+
+        {/* this button is for normaly used to fetch the data*/}  
+        {/* <button style={btn_style}>Watch now</button>       */}
+        
+        {/* this buttonName is for styled object*/}
+        {/* <ButtonName>Watch now</ButtonName>           */}
+
+        {/* this buttonName is for template literal*/}
+        <ButtonName rating = {rating}>Watch now</ButtonName> 
 

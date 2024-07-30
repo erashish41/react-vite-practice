@@ -3,6 +3,7 @@
   box-shadow: rgba(0, 0, 0, 0.8) 0px 6px 24px 0px,
   rgba(236, 235, 235, 0.08) 0px 0px 0px 1px;
   background-color: #fff;
+  border-radius: 10px;
   }
 img{
   width: 100%;
@@ -24,4 +25,15 @@ img{
   -moz-border-radius: 100rem;
   -ms-border-radius: 100rem;
   -o-border-radius: 100rem;
+}
+.card-content{
+  padding: 3.2rem 1.2rem; 
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+ 
+}
+.card-heading{
+  margin-bottom: 3.2rem;
+  font-size: 30px;
 }
