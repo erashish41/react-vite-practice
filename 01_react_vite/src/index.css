@@ -1,5 +1,9 @@
 /* This file is global CSS file what ever we change it will apply for globaly not indivual*/
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *{
   margin: 0;
   padding: 0;

@@ -148,3 +148,21 @@ Css Modules in react: Scope and Reusable styles
         {/* this buttonName is for template literal*/}
         <ButtonName rating = {rating}>Watch now</ButtonName> 
 
+11.Tailwind CSS in React
+- It is a utility-first CSS framework which means we can use utility classes to build custom
+     designs without writing CSS as in the traditional approach.
+- No more silly names for CSS classes and IDs.
+- Minimum lines of Code in CSS file.
+- We can customize the designs to make the components.
+- steps to Install Tailwind: (link - https://tailwindcss.com/docs/guides/vite)
+
+a. Create your project
+b. Install Tailwind CSS
+- it will show the version  "tailwindcss": "^3.4.7", in devDependencies of package.json
+c. Configure your template paths: by this command it will make new file (tailwind.config.js)
+- npx tailwindcss init -p
+d. Add the Tailwind directives to your CSS file (index.css)
+    e. Start your build process
+    f. Start using Tailwind in your project
+
+

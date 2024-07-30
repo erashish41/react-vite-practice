@@ -54,12 +54,18 @@ export const SeriesList = ({data}) => {
          <div>
            <img src= {img_url} alt={title}/>
          </div>
-         <div className={style["card-content"]}>   {/* - things which are not accessable (like hyphens - ) by . notation we have to use bracket notation [ ] */}
+         {/* - things which are not accessable (like hyphens - ) by . notation we have to use bracket notation [ ] */}
+         {/* <div className={style["card-content"]}>    */}
+
+        {/* This is done with the help of CSS Tailwind */}
+         <div className= "flex flex-col gap-6 px-6 py-6  ">
+
             <h2 >Original Title: {title}</h2>
+            {/* h3 is replace by Rating */}
             <Rating>Rating: <span className = {`${style.rating} ${ratingClass}`} > {rating}</span></Rating>
             <p>Cast: {cast.join(", ")} </p>
             <p>Genres: {genre.join(", ")}</p>
-            <p>Content Type: {description} </p>
+            <p className= "text-3xl font-bold underline text-cyan-300	">Content Type: {description} </p>
             <a href= {watch_url} target="_blank">
               {/* this button is for normaly used to fetch the data*/}  
               {/* <button style={btn_style}>Watch now</button> */}
