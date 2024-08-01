@@ -182,7 +182,7 @@ e.g. =
 e.g. - onClick, onChange, onSubmit, onMouseEnter, onMouseLeave, onKeyDown, onKeyup, onFocus, 
     onBlur, onInput 
 
-- Function Naming Convertions,
+- Function Naming Convertions in Event Handling
 -Prefix with 'handle' - it is common convention to prefix event handler functions with 
     'handle' to clearly indicate their purpose.
 e.g. - handleClick, handleChange, handleSubmit
@@ -200,12 +200,24 @@ e.g. - handleClick, handleChange, handleSubmit
 - it will give SyntheticBaseEvent as input in console
 - React put this in wrap, so that all the devices work verywell
 - in event handling 
- {/* when we use name function we only have to pass the reference */}
- <button onClick={handleButtonClick}> Click me</button>
- {/* in fat arrow fn we have the call the fn like this handleButtonClick() */}
- <button onClick={ () => handleButtonClick()}> Click me 2</button>
+    {/* when we use name function we only have to pass the reference */}
+    <button onClick={handleButtonClick}> Click me</button>
+    {/* in fat arrow fn we have the call the fn like this handleButtonClick() */}
+    <button onClick={ () => handleButtonClick()}> Click me 2</button>
 
- - passing Argument to EH
+- passing Argument to EH
+- when we call function and give value to pass in it is called argument
+- when we define function and pass the value is called funtion
 
- - when we call function and give value to pass in it is called argument
- - when we define function and pass the value is called funtion
+13.Passing Event Handlers as props
+- it is used to allow child components to communicate with parent components.
+- various types: -
+a. Form Hanlding: passing EH like onChange or onSubmit to form components allows child componet to update
+                    the form data and notify parent components of change
+b. User Interaction: EV like onClick can be passed to interactive elements (like: button, link)
+                    to trigger specific actions in parent component such as opening a modal
+                    or navigating to a different page
+c. State Management: EV can be used to update state in parent component which can passed to child
+                    cmponents as props to reflect the update status
+d. Callback Functions: EV can be used as callback function to handle asynchronous operations
+                    or to update state based on result of operation
