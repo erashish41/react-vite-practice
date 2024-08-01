@@ -165,4 +165,47 @@ d. Add the Tailwind directives to your CSS file (index.css)
     e. Start your build process
     f. Start using Tailwind in your project
 
+- we can change the properties in Tailwind by appling like this from [Tailwind.com]
+e.g. = 
+<div className= "flex flex-col gap-6 px-6 py-6  ">
+<p className= "text-3xl font-bold underline text-cyan-300">Content Type: {description} </p>
 
+
+12.Event Handler (EH) in React 
+- Event handling in React follows same pattern as JS event handling but with some key difference,
+    such as using Synthetic events for cross-browser compatibility and providing consistent
+    event handling across different elements and browsers.
+
+- Event Naming Convertions names in JSX should be written in camelCase
+- Prifix with 'on': Event handlers should be prefixed with 'on
+- some event handlers are 
+e.g. - onClick, onChange, onSubmit, onMouseEnter, onMouseLeave, onKeyDown, onKeyup, onFocus, 
+    onBlur, onInput 
+
+- Function Naming Convertions,
+-Prefix with 'handle' - it is common convention to prefix event handler functions with 
+    'handle' to clearly indicate their purpose.
+e.g. - handleClick, handleChange, handleSubmit
+
+
+- Synthietic Base Event in React (SE)
+- event handling in React is the process of capturing and responding touser inteaction, such as 
+    clicks, keystrokes or form submissions, within React app.
+- when we handle events in React, like a button or typing in an input box.
+- React wrap native browser events in something called a synthetic events
+- SE iin REact are cross-brosser wrappers around the browsers origianl event/ native event/
+- diffe browser have diff events names
+- it provides an unified API
+
+- it will give SyntheticBaseEvent as input in console
+- React put this in wrap, so that all the devices work verywell
+- in event handling 
+ {/* when we use name function we only have to pass the reference */}
+ <button onClick={handleButtonClick}> Click me</button>
+ {/* in fat arrow fn we have the call the fn like this handleButtonClick() */}
+ <button onClick={ () => handleButtonClick()}> Click me 2</button>
+
+ - passing Argument to EH
+
+ - when we call function and give value to pass in it is called argument
+ - when we define function and pass the value is called funtion
