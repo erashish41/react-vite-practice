@@ -1,5 +1,5 @@
-{/* - NetflixSeries is a Component not a Function
-    - key and data are props(property) which are passed in it
+{/* - NetflixSeries is a Component not a Function.
+    - key and data are props(property) which are passed from parent to child component.
     - currElem itself represents each element in the seriesData array, so using currElem[0] 
     - is incorrect.   at parameter: current element and index will come
     - SeriesList is child component which is called by NetflixSeries as parent component

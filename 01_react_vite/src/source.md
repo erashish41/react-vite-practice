@@ -3,24 +3,42 @@
 3.App.jsx
 4.Netflix.jsx
 5.SeriesList.jsx
-6.seriesData.json
-7.Profile.jsx
-Practice.jsx
+6.Practice.jsx
+7.seriesData.json
+8.Profile.jsx
+9.NetflixSeries.module.css
+10.NetflixSeries.css
+11.EventHandling.jsx
+12.EV.css
+13.EventProps.jsx
 source.md
 
-In a React application, the ReactDOM.createRoot method is used to create a root container for your React components.
+- In a React application, the ReactDOM.createRoot method is used to create a root container for your
+     React  components. ReactDOM.createRoot is a method in React that allows you to create a root for 
+     your React application.
 
 1.React does not render `false`, `null`, `undefned`, or `NaN` in the Dom. These values, when used in JSX, 
     will  result in nothing being displayed.
+- However, `0` and empty strings (`""`) are exceptions
 
-2.However, `0` and empty strings (`""`) are exceptions :
+2.Fragments: 
+- is used to combine the child nodes and render without creating extra parent node
+- it is the way to render multiple elements without adding extra node to DOM
 
 3.Dynamic value: here we made variables function inside JS with the help of { } curely braces in JSX
 
-4.Variable can be embed any JS variable within JSX by { }.
+4.Variable can be embaded any JS variable within JSX by { }.
  -   the value of variable will be inserted into the DOM at respective location
 
-5.we can write the JD expression inside the { }, which includes opertaions, function calls.
+5.Javascript XML (JSX) :
+- we can write the JS expression inside the { }, which includes opertaions, function calls.
+- it allows to write HTML in React and place them in Dom without creteElement() and append Child () method
+- JSX expression must have 1 parent element and all are put in it:
+        result ( 
+            <div>
+            <h></h> <p></p>
+            </div>
+          );
 
 
 6.Import and Export
@@ -30,7 +48,6 @@ b. named Export: a file can have multiple named exports, but we have put file na
     e.g. -- import {NetflixSeries} from "./components/NetflixSeries"
 
 c. named Import: when importing named exports, the import names must match the export names exactly
-
 
 
 7.In NetflixSeries.jsx: -
@@ -188,6 +205,8 @@ e.g. - onClick, onChange, onSubmit, onMouseEnter, onMouseLeave, onKeyDown, onKey
 e.g. - handleClick, handleChange, handleSubmit
 
 
+
+
 - Synthietic Base Event in React (SE)
 - event handling in React is the process of capturing and responding touser inteaction, such as 
     clicks, keystrokes or form submissions, within React app.
@@ -221,3 +240,18 @@ c. State Management: EV can be used to update state in parent component which ca
                     cmponents as props to reflect the update status
 d. Callback Functions: EV can be used as callback function to handle asynchronous operations
                     or to update state based on result of operation
+
+14.Event Propagation (EP)
+- EP is done only when all the data is shown in same div
+- React follows the same event propogation model as JS DOM events.
+- EP refers the process of how events propogate or travel through DOM hierarchy.
+
+- 3 types of EP
+a. Catpuring Phase: The event starts from root of DOM and goes down to the target element 
+b. Bubbling Phase: The event starts from target element bubbles up to the root of DOM
+c. Target Phase: The event reaches the target element
+
+- Target element can be <td>, <tr>
+- React provides a way to stop event propagation using the stopPropagation.
+- React does not recommend to use EventListener
+- we have to use onClickCapture to  get the data from target element to root of DOM 
