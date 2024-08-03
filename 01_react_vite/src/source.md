@@ -267,3 +267,12 @@ c. Target Phase: The event reaches the target element
 - in React state refers to an object that holds data or information about the component.
 - state is managed within the component(like variables declared in function).
 - state is dynamic and mutable.
+
+- React don't understand normal variable, to understand it React.js provides a function called "useState"
+- type of function which starts with "use" is called hook.      (use = hook)
+
+    const [state, setState] = useState(initialState)
+    const [ count, setCount ] = useState(0)
+
+    e.g. - const [calories, setCalories] = useState(initial value of calories)
+
