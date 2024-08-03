@@ -21,14 +21,17 @@ source.md
     will  result in nothing being displayed.
 - However, `0` and empty strings (`""`) are exceptions
 
+
 2.Fragments: 
 - is used to combine the child nodes and render without creating extra parent node
 - it is the way to render multiple elements without adding extra node to DOM
 
 3.Dynamic value: here we made variables function inside JS with the help of { } curely braces in JSX
 
+
 4.Variable can be embaded any JS variable within JSX by { }.
  -   the value of variable will be inserted into the DOM at respective location
+
 
 5.Javascript XML (JSX) :
 - we can write the JS expression inside the { }, which includes opertaions, function calls.
@@ -114,6 +117,7 @@ d. Passing JSX as props: In this file we have fetch the data from parent to chil
         zIndex: 1,
 }
 
+
 9.Conditional styling for Dynamic UI
 -  we can se Ternary Operator to add conditional stylings to our CSS
 - make seperate method to render it, name as ratingClass
@@ -130,6 +134,7 @@ Css Modules in react: Scope and Reusable styles
 - things which are not accessable (like hyphens - ) by . notation we have to use bracket notation 
     [ ] for className with hyphens  
     <div className={style[card-content]}>
+
 
 10.Styled Components (SC) in React for Clean and Dynamic UI
 - firstly we have to download styled component from npm site, we can use bun instead of npm
@@ -164,6 +169,7 @@ Css Modules in react: Scope and Reusable styles
 
         {/* this buttonName is for template literal*/}
         <ButtonName rating = {rating}>Watch now</ButtonName> 
+
 
 11.Tailwind CSS in React
 - It is a utility-first CSS framework which means we can use utility classes to build custom
@@ -205,8 +211,6 @@ e.g. - onClick, onChange, onSubmit, onMouseEnter, onMouseLeave, onKeyDown, onKey
 e.g. - handleClick, handleChange, handleSubmit
 
 
-
-
 - Synthietic Base Event in React (SE)
 - event handling in React is the process of capturing and responding touser inteaction, such as 
     clicks, keystrokes or form submissions, within React app.
@@ -228,6 +232,7 @@ e.g. - handleClick, handleChange, handleSubmit
 - when we call function and give value to pass in it is called argument
 - when we define function and pass the value is called funtion
 
+
 13.Passing Event Handlers as props
 - it is used to allow child components to communicate with parent components.
 - various types: -
@@ -240,6 +245,7 @@ c. State Management: EV can be used to update state in parent component which ca
                     cmponents as props to reflect the update status
 d. Callback Functions: EV can be used as callback function to handle asynchronous operations
                     or to update state based on result of operation
+
 
 14.Event Propagation (EP)
 - EP is done only when all the data is shown in same div
@@ -255,3 +261,9 @@ c. Target Phase: The event reaches the target element
 - React provides a way to stop event propagation using the stopPropagation.
 - React does not recommend to use EventListener
 - we have to use onClickCapture to  get the data from target element to root of DOM 
+
+
+15.useState Hook:
+- in React state refers to an object that holds data or information about the component.
+- state is managed within the component(like variables declared in function).
+- state is dynamic and mutable.
