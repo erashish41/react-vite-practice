@@ -212,7 +212,7 @@ e.g. - handleClick, handleChange, handleSubmit
 
 
 - Synthietic Base Event in React (SE)
-- event handling in React is the process of capturing and responding touser inteaction, such as 
+- event handling in React is the process of capturing and responding to user inteaction, such as 
     clicks, keystrokes or form submissions, within React app.
 - when we handle events in React, like a button or typing in an input box.
 - React wrap native browser events in something called a synthetic events
@@ -264,15 +264,39 @@ c. Target Phase: The event reaches the target element
 
 
 15.useState Hook:
-- in React state refers to an object that holds data or information about the component.
+- in React, state refers to an object that holds data or information about the component.
+    (data can be array, string, number, object)
 - state is managed within the component(like variables declared in function).
 - state is dynamic and mutable.
 
-- React don't understand normal variable, to understand it React.js provides a function called "useState"
+- React don't understand normal variable, to understand it, React.js provides a function called "useState"
 - type of function which starts with "use" is called hook.      (use = hook)
 
     const [state, setState] = useState(initialState)
     const [ count, setCount ] = useState(0)
 
     e.g. - const [calories, setCalories] = useState(initial value of calories)
+- const is variable(key), calories is state variable (with current value), setCalories is function
+    that upadates the state variable, useState have the initial value of state
 
+Need of State in React:
+- interactivity: state makes application interactive. By maintaining state, we can create components
+                that respond to user actions, such as clicks, form submissions or keyboard input
+- Dynamic UI updates: it allows components to update dynamically in response to user input or other events.
+            e.g. in form the state might hold current value of input field, update in real time as user types
+- Data managment: state helps manage data within component. we can fetch data from API and store it in state 
+                which will then be used to render the UI
+- Component Communication: State can be lifted up parent to child component, for consistent data flow
+
+
+16.How React State works
+- Reconciliation: virtual DOM (VDOM) is concept where virtual representation of UI is kept in memeory 
+    and synced with real DOM by library such as ReactDOM.
+- button calls setState() function which notes React.js that we are trying to update a state
+- Diffing Algorithm: in React JS differentiates the updated and previous DOM of the application. 
+    DOM stores the components of a website in a tree structure. React uses virtual DOM which is a lightweight version of the DOM.
+
+- State change in ParentComponent: if there is change in ParentComponent, React will re-render ParentComponent
+    and all its children
+- means if parent component is changed child component will also changes
+- if there is Sibling component they will not change if parent or child component changes

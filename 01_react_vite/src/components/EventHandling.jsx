@@ -25,7 +25,7 @@ const handleWelcomeUser = (user) => {
             <button onClick={handleButtonClick}> Click me</button> 
             <br/>
             <br/>
-            {/* in fat arrow fn we have the call the fn like this handleButtonClick() */}
+            {/* in fat arrow fn we have to call the fn like this handleButtonClick() */}
             <button onClick={ (event) => handleButtonClick(event)}> Click me 2</button>
             <br/>
             <br/>

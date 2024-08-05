@@ -3,6 +3,7 @@
 import { EventHandling } from "./components/EventHandling";
 import { EventPropagation } from "./components/EventPropagation";
 import { EventProps } from "./components/EventProps";
+import { DerivedState } from "./components/hooks/DerivedState";
 import { State } from "./components/hooks/State";
 import NetflixSeries from "./components/NetflixSeries";
 import "./components/NetflixSeries.module.css";
@@ -16,7 +17,8 @@ export const App = () => {
         {/* <EventHandling /> */}
         {/* <EventProps /> */}
         {/* < EventPropagation /> */}
-        <State />
+        {/* <State /> */}
+        <DerivedState />
       </section>
     )
 }

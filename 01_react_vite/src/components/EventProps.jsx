@@ -1,4 +1,6 @@
- export const EventProps = () => {
+// Passing Event handlers as Props
+
+export const EventProps = () => {
 
     const handleWelcomeUser = (user) => {
         alert(`Hey! ${user}`)
@@ -10,6 +12,7 @@
 
     return (
         <>
+        {/* we have pass the two props in WelcomeUser  (child component) */}
             <WelcomeUser 
                 onClick= {() => handleWelcomeUser("Ashish")} 
                 onMouseEnter = {handleHover} 

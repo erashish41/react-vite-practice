@@ -51,14 +51,14 @@ export const SeriesList = ({data}) => {
 
     return (                                 
         <li className= {style.card} >             {/* // You need to give each array item a key — a string or a number that uniquely identifies it among other items in that array: */}
-         <div>
-           <img src= {img_url} alt={title}/>
-         </div>
-         {/* - things which are not accessable (like hyphens - ) by . notation we have to use bracket notation [ ] */}
-         {/* <div className={style["card-content"]}>    */}
+          <div>
+            <img src= {img_url} alt={title}/>
+          </div>
+          {/* - things which are not accessable (like hyphens - ) by . notation we have to use bracket notation [ ] */}
+          {/* <div className={style["card-content"]}>    */}
 
-        {/* This is done with the help of CSS Tailwind */}
-         <div className= "flex flex-col gap-6 px-6 py-6  ">
+            {/* This is done with the help of CSS Tailwind */}
+          <div className= "flex flex-col gap-6 px-6 py-6  ">
 
             <h2 >Original Title: {title}</h2>
             {/* h3 is replace by Rating */}
