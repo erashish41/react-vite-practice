@@ -1,3 +1,5 @@
+// example to find the data from array with useStates
+
 import { useState } from "react"
 import "../EV.css"
 
@@ -13,19 +15,19 @@ export const DerivedState = () => {
     return (
         <>
             <div className="main-div">
-                <h1>Users List</h1>
-                <ul>
-                    {users.map((currElem, index) => {
-                        return(
-                            <>
-                                <li key={index}>
-                                    {currElem.naam} - {currElem.age} years old
-                                </li>
-                            </>
-                        )
-                    })}
-                </ul>
+                <h1>Users Info</h1>
             </div>
+            <ul>
+                {users.map((currElem, index) => {
+                    return (
+                        <>
+                            <li key={index}>
+                                {currElem.naam} - {currElem.age} years old 
+                            </li>
+                        </>
+                    )
+                })}
+            </ul>
         </>
     )
 }
