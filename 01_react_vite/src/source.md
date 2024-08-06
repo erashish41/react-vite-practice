@@ -266,6 +266,8 @@ c. Target Phase: The event reaches the target element
 15.useState Hook:
 - in React, state refers to an object that holds data or information about the component.
     (data can be array, string, number, object)
+- The useState Hook can be used to keep track of strings, numbers, booleans, arrays, objects, 
+    and any combination of these!
 - state is managed within the component(like variables declared in function).
 - state is dynamic and mutable.
 
@@ -300,3 +302,23 @@ Need of State in React:
     and all its children
 - means if parent component is changed child component will also changes
 - if there is Sibling component they will not change if parent or child component changes
+
+17.DerivedState: Derived state refers to state that is derived from props. It's state that needs to be
+    updated whenever the props change. This is where getDerivedStateFromProps comes in. It allows you to 
+    update the state based on changes in props.
+
+- DS is used to find the data from array with useStates
+- DS1 is used to find the average and length of the data given in array
+
+
+18.Lifting State Up: in this pattern we move the state from child components to a common parent 
+    component so that multiple child components can share and synchronize this state.
+- this allows data to flow down as props and actions(such as events) to flow up
+- when we have 2 or more components that need to share the same state, we should lift the state up
+    to their nearest common parent.
+
+- onChange={(e) => setInputValue(e.target.value)} 
+- (e) => setInputValue(e.target.value): This is an arrow function that takes an event object e as an argument.
+- e.target.value: This is the current value of the input element.
+- setInputValue(e.target.value): This updates the state variable inputValue with the new value of the 
+    input element.
