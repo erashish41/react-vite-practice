@@ -322,3 +322,45 @@ Need of State in React:
 - e.target.value: This is the current value of the input element.
 - setInputValue(e.target.value): This updates the state variable inputValue with the new value of the 
     input element.
+
+19.Short-Circuit Evolution: In JavaScript short-circuiting, an expression is evaluated from left to 
+    right until it is confirmed that the result of the remaining conditions is not going to affect 
+    the already evaluated result.
+
+a. Logical OR (||)
+    Syntax: expression || expression2
+    Rule: If expression is truthy, return expression. Otherwise, return expression2
+    const result = false || 'Hello'; // 'Hello'
+    const result2 = true || 'World'; // true
+
+b. Logical AND (&&)
+    Syntax: expression && expression2
+    Rule: If expression is falsy, return expression. Otherwise, return expression2.
+    const result = true && 'Hello'; // 'Hello'
+    const result2 = false && 'World'; // false
+
+c. Nullish Coalescing (??)
+    Syntax: expression ?? expression2
+    Rule: If expression is not null or undefined, return expression. Otherwise, return expression2.
+    const result = null ?? 'Hello'; // 'Hello'
+    const result2 = undefined ?? 'World'; // 'World'
+    const result3 = " ?? 'Fallback'; //"
+
+
+20.Rules of Hooks
+- Functions whose names start with use are called Hooks in React.
+- Hooks can only be called inside the body of a function component.
+- Do not call Hooks inside conditions or loops.
+- Do not call Hooks after a conditional return statement.
+- Do not call Hooks in event handlers.
+- Do not call Hooks in class components.
+- Do not call Hooks inside functions passed to useMemo, useReducer, or useEffect.
+- Don’t call Hooks inside loops, conditions, or nested functions.
+    
+- It starts with use (useState, useEffect, useContext, useReducer, useCallback, useMemo, 
+    useRef, useLayoutEffect, useDebugValue, useImperativeHandle)
+- Hooks can only be used at the top level of your component.
+- Do not call Hooks inside loops, conditions, or nested functions.
+- You can also create your own custom hooks by creating functions starting with use
+    ensures that React can identify it as a Hook. (ex. use Fetch, use Form)
+- Ensure Hooks are Called in the Same Order. This allows React to properly preserve between re-renders.
