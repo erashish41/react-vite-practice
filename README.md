@@ -1,1 +1,1 @@
-# react-vite-practice
+# react-vite
