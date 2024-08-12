@@ -7,7 +7,9 @@ import { DerivedState } from "./components/hooks/DerivedState";
 import { DerivedState1 } from "./components/hooks/DerivedState1";
 import { LiftingState } from "./components/hooks/LiftingState";
 import ShortCircuit from "./components/hooks/ShortCircuit";
+
 import { State } from "./components/hooks/State";
+import { Index } from "./components/hooks/useStates";
 import NetflixSeries from "./components/NetflixSeries";
 import "./components/NetflixSeries.module.css";
  
@@ -24,7 +26,8 @@ export const App = () => {
         {/* <DerivedState /> */}
         {/* <DerivedState1 /> */}
         {/* <LiftingState /> */}
-        <ShortCircuit />
+        {/* <ShortCircuit /> */}
+        <Index />
       </section>
     )
 }

@@ -20,7 +20,7 @@ const ShortCircuit = () => {
     <section className="container short-container">
       <h1>Welcome to the ShortCircuit Evaluation!</h1>
 
-      {/* Conditional rendering using short circuit evaluation */}
+      {/* Conditional rendering using short circuit evaluation  -- this is converted to conditional operator*/}
       {isLoggedIn && <p>You are logged in!</p>}
 
       {/* Another example of short circuit evaluation */}

@@ -364,3 +364,15 @@ c. Nullish Coalescing (??)
 - You can also create your own custom hooks by creating functions starting with use
     ensures that React can identify it as a Hook. (ex. use Fetch, use Form)
 - Ensure Hooks are Called in the Same Order. This allows React to properly preserve between re-renders.
+
+- console.log(useState ()) :it will give us 2 array [undefined, function()]
+
+- Functions passed to useState() and setState() runs twice during development mode to prevent
+    developers from running side effects. (due to React.fragments)
+- Side effects in programming refer to changes or interactions that occur outside the scope of a
+    function or block of code.
+- React.js compares previous state and new state using Object.is(), if it finds both are same then it will
+    ignore re-rendering.
+- React.js batches all setStates() inside a event handlers and run them at the same time.
+    to access the value immediately after setting a state, then you will get old value as it'
+    asynchronous.
