@@ -376,3 +376,19 @@ c. Nullish Coalescing (??)
 - React.js batches all setStates() inside a event handlers and run them at the same time.
     to access the value immediately after setting a state, then you will get old value as it'
     asynchronous.
+
+21.Challenge.jsx        
+- disabled is used for button to discountinue after certain number
+    <button onClick={handleIncrement} disabled= {count >= 100} >Increment</button>
+
+- Controlled components: refer to the components where the state and behaviors are controlled
+                         by Parent components.
+- Controlled Components are those in which form’s data is handled by the component’s state. It takes 
+    its current value through props and makes changes through callbacks like onClick, onChange, etc. 
+
+- Uncontrolled components: are the ones having control of their own state and manage the behaviors 
+                         on themselves.
+-  Uncontrolled Components are the components that are not controlled by the React state and are 
+        handled by the DOM (Document Object Model). 
+
+22.RegistrationReact.jsx
