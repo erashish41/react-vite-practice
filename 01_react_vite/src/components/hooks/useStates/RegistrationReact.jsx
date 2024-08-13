@@ -17,6 +17,8 @@ export const RegistrationReact = () => {
     phoneNumber: "",
   });
 
+  // ...prev: This copies all the properties (like name, email, etc.) from the previous state of the user.
+  // [name]: value -- this means now name is dynamic variable
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setUser((prev) => ({ ...prev, [name]: value }));
