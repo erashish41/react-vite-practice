@@ -11,6 +11,7 @@ import ShortCircuit from "./components/hooks/ShortCircuit";
 import { State } from "./components/hooks/State";
 import { Index } from "./components/hooks/useStates";
 import { Challenge } from "./components/hooks/useStates/Challenge";
+import { ContactForm } from "./components/hooks/useStates/ContactForm";
 import { LoginPage } from "./components/hooks/useStates/LoginPage";
 import { RegistrationReact } from "./components/hooks/useStates/RegistrationReact";
 import NetflixSeries from "./components/NetflixSeries";
@@ -34,7 +35,8 @@ export const App = () => {
         {/* <Challenge /> */}
         {/* <RegistrationReact /> */}
         {/* <Extra /> */}
-        <LoginPage />
+        {/* <LoginPage /> */}
+        <ContactForm />
       </section>
     )
 }
