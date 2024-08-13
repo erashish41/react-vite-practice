@@ -9,6 +9,9 @@ import { DerivedState1 } from "./components/hooks/DerivedState1";
 import { LiftingState } from "./components/hooks/LiftingState";
 import ShortCircuit from "./components/hooks/ShortCircuit";
 import { State } from "./components/hooks/State";
+import { DateTime } from "./components/hooks/useEffect/DateTime";
+import { EffectChallenge } from "./components/hooks/useEffect/EffectChallenge";
+import { IndexOne } from "./components/hooks/useEffect/IndexOne";
 import { Index } from "./components/hooks/useStates";
 import { Challenge } from "./components/hooks/useStates/Challenge";
 import { ContactForm } from "./components/hooks/useStates/ContactForm";
@@ -36,7 +39,10 @@ export const App = () => {
         {/* <RegistrationReact /> */}
         {/* <Extra /> */}
         {/* <LoginPage /> */}
-        <ContactForm />
+        {/* <ContactForm /> */}
+        {/* <IndexOne /> */}
+        {/* <DateTime /> */}
+        <EffectChallenge />
       </section>
     )
 }

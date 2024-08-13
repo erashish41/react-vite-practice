@@ -391,4 +391,28 @@ c. Nullish Coalescing (??)
 -  Uncontrolled Components are the components that are not controlled by the React state and are 
         handled by the DOM (Document Object Model). 
 
-22.RegistrationReact.jsx
+22.Data to backend server
+    In these above file we have get the data and provide to backend server
+a. RegistrationReact.jsx
+b. LoginPage.jsx
+c. ControlForm.jsx
+d. Challenge.jsx
+
+23.UseEffect
+
+- The useEffect hook in React is used for handling side effects in functional components.
+                    use Effect(() => {
+                        // Your side effect code here
+                        return () => {
+                        // Cleanup code here (optional)
+                    }, [dependencies]);
+1. Initial Render: When the component mounts useEffect can run its effect function to perfor
+    operations like data fetching.
+2. Dependencies: The second argument, an array of dependencies, which determines
+    effect should re-run. If any value in this array changes, the effect will re-run.
+3. Cleanup: useEffect can return a cleanup function to clean up after the effect, such
+    unsubscribing from an event or clearing a timer.
+
+- A side effect is any operation that affects something outside the scope of a function (Pure function).
+    In React, side effects are managed using hooks like useEffect to ensure they are handled in a 
+    controlled and predictable manner. This includes tasks like (In next Slide)
