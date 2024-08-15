@@ -12,6 +12,7 @@ import { State } from "./components/hooks/State";
 import { CleanUpuseEffect } from "./components/hooks/useEffect/CleanUpuseEffect";
 import { DateTime } from "./components/hooks/useEffect/DateTime";
 import { EffectChallenge } from "./components/hooks/useEffect/EffectChallenge";
+import { HowNotToFetchApi } from "./components/hooks/useEffect/HowNotToFetchApi";
 import { IndexOne } from "./components/hooks/useEffect/IndexOne";
 import { Index } from "./components/hooks/useStates";
 import { Challenge } from "./components/hooks/useStates/Challenge";
@@ -44,7 +45,8 @@ export const App = () => {
         {/* <IndexOne /> */}
         {/* <DateTime /> */}
         {/* <EffectChallenge /> */}
-        <CleanUpuseEffect />
+        {/* <CleanUpuseEffect /> */}
+        <HowNotToFetchApi />
       </section>
     )
 }
