@@ -1,4 +1,4 @@
-//  2 way data is shown in backend server
+//  2 way to get the data and send to backend server
 // if the input value is more than 4 then we have to use object method only (this given below)
 
 import { useState } from "react"

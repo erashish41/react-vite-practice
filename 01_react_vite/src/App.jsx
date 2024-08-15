@@ -9,6 +9,7 @@ import { DerivedState1 } from "./components/hooks/DerivedState1";
 import { LiftingState } from "./components/hooks/LiftingState";
 import ShortCircuit from "./components/hooks/ShortCircuit";
 import { State } from "./components/hooks/State";
+import { CleanUpuseEffect } from "./components/hooks/useEffect/CleanUpuseEffect";
 import { DateTime } from "./components/hooks/useEffect/DateTime";
 import { EffectChallenge } from "./components/hooks/useEffect/EffectChallenge";
 import { IndexOne } from "./components/hooks/useEffect/IndexOne";
@@ -42,7 +43,8 @@ export const App = () => {
         {/* <ContactForm /> */}
         {/* <IndexOne /> */}
         {/* <DateTime /> */}
-        <EffectChallenge />
+        {/* <EffectChallenge /> */}
+        <CleanUpuseEffect />
       </section>
     )
 }

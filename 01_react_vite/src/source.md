@@ -280,6 +280,9 @@ c. Target Phase: The event reaches the target element
     e.g. - const [calories, setCalories] = useState(initial value of calories)
 - const is variable(key), calories is state variable (with current value), setCalories is function
     that upadates the state variable, useState have the initial value of state
+- setContact((prev) => ({...prev, [name]: value }))
+- (...prev) means it will store previous data and to add the data at top or end
+
 
 Need of State in React:
 - interactivity: state makes application interactive. By maintaining state, we can create components
@@ -391,6 +394,10 @@ c. Nullish Coalescing (??)
 -  Uncontrolled Components are the components that are not controlled by the React state and are 
         handled by the DOM (Document Object Model). 
 
+- <input type="text" autoComplete="off" value={name} onChange={(e) => setName(e.target.value)}> </input>
+- the time we put value in input tag it will convert uncontrolled component to controlled component.
+
+
 22.Data to backend server
     In these above file we have get the data and provide to backend server
 a. RegistrationReact.jsx
@@ -412,7 +419,18 @@ d. Challenge.jsx
     effect should re-run. If any value in this array changes, the effect will re-run.
 3. Cleanup: useEffect can return a cleanup function to clean up after the effect, such
     unsubscribing from an event or clearing a timer.
+- Cleanup function saves applications from unwanted behaviors like memory leaks by cleaning up effects. 
+    In doing so, we can optimize our application’s performance.
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCount((prev) => (prev + 1))
+        }, 1000);
+
+        return () => clearInterval(timer)
+    }, [])
 
 - A side effect is any operation that affects something outside the scope of a function (Pure function).
     In React, side effects are managed using hooks like useEffect to ensure they are handled in a 
-    controlled and predictable manner. This includes tasks like (In next Slide)
+    controlled and predictable manner.
+    
