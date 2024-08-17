@@ -25,6 +25,7 @@
     - HowNotToFetchApi.jsx
     - FetchApiwithFunction.jsx
     - FetchApiwithHandlingandError.jsx
+    - AsyncAwaitTryCatch.jsx
 
 source.md
 

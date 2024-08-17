@@ -9,6 +9,7 @@ import { DerivedState1 } from "./components/hooks/DerivedState1";
 import { LiftingState } from "./components/hooks/LiftingState";
 import ShortCircuit from "./components/hooks/ShortCircuit";
 import { State } from "./components/hooks/State";
+import { AsyncAwaitTryCatch } from "./components/hooks/useEffect/AsyncAwaitTryCatch";
 import { CleanUpuseEffect } from "./components/hooks/useEffect/CleanUpuseEffect";
 import { DateTime } from "./components/hooks/useEffect/DateTime";
 import { EffectChallenge } from "./components/hooks/useEffect/EffectChallenge";
@@ -50,7 +51,8 @@ export const App = () => {
         {/* <CleanUpuseEffect /> */}
         {/* <HowNotToFetchApi /> */}
         {/* <FetchApiwithFunction /> */}
-        < FetchApiwithHandlingandError />
+        {/* < FetchApiwithHandlingandError /> */}
+        <AsyncAwaitTryCatch />
       </section>
     )
 }
