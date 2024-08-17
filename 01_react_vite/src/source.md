@@ -11,6 +11,21 @@
 11.EventHandling.jsx
 12.EV.css
 13.EventProps.jsx
+14.useState
+    - index.jsx
+    - LoginPage.jsx
+    - RegistrationReact.jsx
+    - Challenge.jsx
+    - ContactForm.jsx
+15.useEffect
+    - IndexOne.jsx
+    - DateTime.jsx
+    - EffectChallenge.jsx
+    - CleanUpuseEffect.jsx
+    - HowNotToFetchApi.jsx
+    - FetchApiwithFunction.jsx
+    - FetchApiwithHandlingandError.jsx
+
 source.md
 
 - In a React application, the ReactDOM.createRoot method is used to create a root container for your
@@ -435,3 +450,48 @@ d. Challenge.jsx
     controlled and predictable manner.
     
 - whenever we call the data of Api it will give us null
+
+- Fetch API in React with useEffect
+
+- Why NULL in useState
+- Using null as the initial state value in useState is a common pattern when you expect 
+    the state to hold a non-array object (like an API response) 
+- Using null allows you to easily check whether the data has been fetched.
+- null makes it clear that the data has not been fetched yet. This is different from an 
+    empty object {} or array [], which might imply that the data is present but empty.
+- Using null allows you to easily check whether the data has been fetched. For instance,
+     if (!data) can be used to display a loading spinner or message.
+
+ const [pokemon, setPokemon] = useState(null)   
+    useEffect(() => {
+        fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((res) => res.json())
+        .then((data) => setPokemon(data))
+        .catch((error) => console.log(error))
+
+    },[])
+    return (
+        <ul> data:
+                {
+                    pokemon.map((currElm) => {
+                        return <li key={currElm.id}>{currElm.title}</li>
+                    })
+                }
+             </ul>)
+- we can fetch Api with Function also
+     useEffect(() => {
+        fetchPokemon()
+    },[])
+
+    console.log(pokemon);
+    after calling fetchPokemon() function we can get the data
+
+- Use [] when you expect the state to eventually hold an array of items.
+- Use {} when you expect the state to hold a single object with multiple properties.
+- Use null when you want to differentiate between "no data yet" and "data has been fetched".
+
+- Use .map() only on arrays ([]).
+- If your state is an object {} that contains an array, you can use .map() on that array 
+    (e.g., object.array.map()).
+- If your state is null, you must wait until it contains an array (after data is fetched) 
+    before using .map().

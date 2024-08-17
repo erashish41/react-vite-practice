@@ -13,6 +13,7 @@ import { CleanUpuseEffect } from "./components/hooks/useEffect/CleanUpuseEffect"
 import { DateTime } from "./components/hooks/useEffect/DateTime";
 import { EffectChallenge } from "./components/hooks/useEffect/EffectChallenge";
 import { FetchApiwithFunction } from "./components/hooks/useEffect/FetchApiwithFunction";
+import { FetchApiwithHandlingandError } from "./components/hooks/useEffect/FetchApiwithHandlingandError";
 import { HowNotToFetchApi } from "./components/hooks/useEffect/HowNotToFetchApi";
 import { IndexOne } from "./components/hooks/useEffect/IndexOne";
 import { Index } from "./components/hooks/useStates";
@@ -48,7 +49,8 @@ export const App = () => {
         {/* <EffectChallenge /> */}
         {/* <CleanUpuseEffect /> */}
         {/* <HowNotToFetchApi /> */}
-        <FetchApiwithFunction />
+        {/* <FetchApiwithFunction /> */}
+        < FetchApiwithHandlingandError />
       </section>
     )
 }
