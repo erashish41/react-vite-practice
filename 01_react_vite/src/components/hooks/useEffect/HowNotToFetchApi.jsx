@@ -36,17 +36,16 @@ export const HowNotToFetchApi = () => {
         fetch("https://jsonplaceholder.typicode.com/posts")
         .then((res) => res.json())
         .then((data) => setApiData(data))
-        .catch((error) => console.log(error)
-        )
-    }, 
-    [])
+        .catch((error) => console.log(error))
+
+    },[])
 
     return(
         <div className="container effect-container">
             <ul> data:
                 {
                     apiData.map((currElm) => {
-                        return <li key={currElm.id}> {currElm.title}</li>
+                        return <li key={currElm.id}>{currElm.title}</li>
                     })
                 }
              </ul>

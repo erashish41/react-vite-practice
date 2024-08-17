@@ -434,3 +434,4 @@ d. Challenge.jsx
     In React, side effects are managed using hooks like useEffect to ensure they are handled in a 
     controlled and predictable manner.
     
+- whenever we call the data of Api it will give us null
