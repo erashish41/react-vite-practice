@@ -27,6 +27,7 @@ import { LoginPage } from "./components/hooks/useStates/LoginPage";
 import { RegistrationReact } from "./components/hooks/useStates/RegistrationReact";
 import NetflixSeries from "./components/NetflixSeries";
 import "./components/NetflixSeries.module.css";
+import { ParentComponent } from "./components/PropDrilling";
  
 
 export const App = () => {
@@ -58,7 +59,8 @@ export const App = () => {
         {/* <AsyncAwaitTryCatch /> */}
         {/* <IndexuseRef /> */}
         {/* <ForwardRef /> */}
-        <IndexUseId />
+        {/* <IndexUseId /> */}
+        <ParentComponent />
       </section>
     )
 }
