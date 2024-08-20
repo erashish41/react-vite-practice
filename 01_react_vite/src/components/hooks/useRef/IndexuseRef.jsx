@@ -21,12 +21,16 @@ export const IndexuseRef = () => {
     
 
     return(
-        <form onSubmit={handleFormSubmit}>
-            <input type='text' id='username' placeholder='enter username' ref={username}></input>
-            <br />
-            <input type='text' id='password' placeholder='enter password' ref={password}></input>
-            <br />
-            <button>submit</button>
-        </form>
+        <>
+            <h1>Hello useRef</h1>
+
+            <form onSubmit={handleFormSubmit}>
+                <input type='text' id='username' placeholder='enter username' ref={username}></input>
+                <br />
+                <input type='text' id='password' placeholder='enter password' ref={password}></input>
+                <br />
+                <button>submit</button>
+            </form>
+        </>
     )
 }

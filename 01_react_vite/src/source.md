@@ -421,6 +421,7 @@ b. LoginPage.jsx
 c. ControlForm.jsx
 d. Challenge.jsx
 
+
 23.UseEffect
 
 - The useEffect hook in React is used for handling side effects in functional components.
@@ -496,3 +497,16 @@ d. Challenge.jsx
     (e.g., object.array.map()).
 - If your state is null, you must wait until it contains an array (after data is fetched) 
     before using .map().
+
+
+24.useRef
+- The useRef Hook allows you to persist values between renders.
+- It can be used to store a mutable value that does not cause a re-render when updated.
+- It can be used to access a DOM element directly.
+- useRef() only returns one item. It returns an Object called current.
+- When we initialize useRef we set the initial value: useRef(0).
+
+- ForwardRef:
+- forwardRef is needed to expose a DOM node in a component to its parent component.
+- React forwardRef allows parent components to move down (or “forward”) refs to their children. 
+- It gives a child component a reference to DOM entity created by its parent component in React.
