@@ -17,6 +17,7 @@ import { FetchApiwithFunction } from "./components/hooks/useEffect/FetchApiwithF
 import { FetchApiwithHandlingandError } from "./components/hooks/useEffect/FetchApiwithHandlingandError";
 import { HowNotToFetchApi } from "./components/hooks/useEffect/HowNotToFetchApi";
 import { IndexOne } from "./components/hooks/useEffect/IndexOne";
+import { IndexuseRef } from "./components/hooks/useRef/IndexuseRef";
 import { Index } from "./components/hooks/useStates";
 import { Challenge } from "./components/hooks/useStates/Challenge";
 import { ContactForm } from "./components/hooks/useStates/ContactForm";
@@ -52,7 +53,8 @@ export const App = () => {
         {/* <HowNotToFetchApi /> */}
         {/* <FetchApiwithFunction /> */}
         {/* < FetchApiwithHandlingandError /> */}
-        <AsyncAwaitTryCatch />
+        {/* <AsyncAwaitTryCatch /> */}
+        <IndexuseRef />
       </section>
     )
 }
