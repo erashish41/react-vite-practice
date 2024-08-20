@@ -17,6 +17,7 @@ import { FetchApiwithFunction } from "./components/hooks/useEffect/FetchApiwithF
 import { FetchApiwithHandlingandError } from "./components/hooks/useEffect/FetchApiwithHandlingandError";
 import { HowNotToFetchApi } from "./components/hooks/useEffect/HowNotToFetchApi";
 import { IndexOne } from "./components/hooks/useEffect/IndexOne";
+import { IndexUseId } from "./components/hooks/useID/Index";
 import { ForwardRef } from "./components/hooks/useRef/ForwardRef";
 import { IndexuseRef } from "./components/hooks/useRef/IndexuseRef";
 import { Index } from "./components/hooks/useStates";
@@ -56,7 +57,8 @@ export const App = () => {
         {/* < FetchApiwithHandlingandError /> */}
         {/* <AsyncAwaitTryCatch /> */}
         {/* <IndexuseRef /> */}
-        <ForwardRef />
+        {/* <ForwardRef /> */}
+        <IndexUseId />
       </section>
     )
 }

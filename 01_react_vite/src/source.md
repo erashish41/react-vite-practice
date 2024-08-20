@@ -26,6 +26,15 @@
     - FetchApiwithFunction.jsx
     - FetchApiwithHandlingandError.jsx
     - AsyncAwaitTryCatch.jsx
+16.useRef
+    -IndexuseRef.jsx
+    -IndexuseRef.css
+    -ForwardRef.jsx
+17.useId
+    -Index.jsx
+
+
+
 
 source.md
 
@@ -510,3 +519,10 @@ d. Challenge.jsx
 - forwardRef is needed to expose a DOM node in a component to its parent component.
 - React forwardRef allows parent components to move down (or “forward”) refs to their children. 
 - It gives a child component a reference to DOM entity created by its parent component in React.
+
+25.useId
+-                const id = useId();
+- This hook generates unique IDs i.e, returns a string that is stable across both the server and 
+    the client sides.
+- Its primary use case is to generate unique IDs for HTML form elements and ensure that the IDs 
+    are always unique in the context of the React application.
