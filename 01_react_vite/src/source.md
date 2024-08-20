@@ -27,11 +27,15 @@
     - FetchApiwithHandlingandError.jsx
     - AsyncAwaitTryCatch.jsx
 16.useRef
-    -IndexuseRef.jsx
-    -IndexuseRef.css
-    -ForwardRef.jsx
+    - IndexuseRef.jsx
+    - IndexuseRef.css
+    - ForwardRef.jsx
 17.useId
-    -Index.jsx
+    - Index.jsx
+18.PropDrilling.jsx
+19.ContextApi
+    - index.jsx
+    - Home.jsx
 
 
 
@@ -526,3 +530,15 @@ d. Challenge.jsx
     the client sides.
 - Its primary use case is to generate unique IDs for HTML form elements and ensure that the IDs 
     are always unique in the context of the React application.
+
+26.ContextAPI
+- PropDrilling.jsx
+- The React Context API was released in 2018 to avoid prop drilling by simplifying state 
+    management and making sharing data across the component tree more efficient and error-free.
+- React Context is a way to manage state globally.
+- It can be used together with the useState Hook to share state between deeply nested components 
+    more easily than with useState alone.
+- To create context, you must Import createContext and initialize it:
+        const UserContext = createContext()
+- In order to use the Context in a child component, we need to access it using the useContext Hook.
+        import { useState, createContext, useContext } from "react";
