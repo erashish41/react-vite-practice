@@ -542,3 +542,12 @@ d. Challenge.jsx
         const UserContext = createContext()
 - In order to use the Context in a child component, we need to access it using the useContext Hook.
         import { useState, createContext, useContext } from "react";
+- The Context API provides a means to share values like state, functions, or any data across 
+    the component tree without passing props down manually at every level. 
+
+- steps to create context API
+1. createContext: create a context object and it should start from capital letter.
+2. Provider component {{ }}: A component that provides the context value to its children. 
+3. useContext(consumer): A hook that allows you to consume a context 
+
+- we have to pass the main context in useContext 

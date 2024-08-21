@@ -4,6 +4,9 @@ import { EventHandling } from "./components/EventHandling";
 import { EventPropagation } from "./components/EventPropagation";
 import { EventProps } from "./components/EventProps";
 import { Extra } from "./components/Extra";
+import { About } from "./components/hooks/ContextAPI/About";
+import { Home } from "./components/hooks/ContextAPI/Home";
+import { BioProvider } from "./components/hooks/ContextAPI/Index";
 import { DerivedState } from "./components/hooks/DerivedState";
 import { DerivedState1 } from "./components/hooks/DerivedState1";
 import { LiftingState } from "./components/hooks/LiftingState";
@@ -60,7 +63,11 @@ export const App = () => {
         {/* <IndexuseRef /> */}
         {/* <ForwardRef /> */}
         {/* <IndexUseId /> */}
-        <ParentComponent />
+        {/* <ParentComponent /> */}
+        <BioProvider>
+          <Home />
+          <About />
+        </BioProvider>
       </section>
     )
 }
