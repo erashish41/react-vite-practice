@@ -566,3 +566,17 @@ d. Challenge.jsx
 - Creating a custom hook is the same as creating a JavaScript function whose name starts with “use”. 
 - It can use other hooks inside it, return anything you want it to return,take anything as parameters.
 - e.g useState, useEffect, useContext
+
+- with Custom hook:
+ instead of writing useContext(BioContext) we can write only our custom hook (useBioContext())
+
+
+29.use hook
+- use is a React API that lets you read the value of a resource like a Promise or context.
+- use is used instead of useContext
+            const value = use(resource);
+
+- When a context is passed to use, it works similarly to useContext. 
+- While useContext must be called at the top level of your component, 'use' can be called 
+    inside conditionals like if and loops like for. use is preferred over useContext because 
+    it is more flexible.
