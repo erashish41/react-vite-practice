@@ -32,15 +32,17 @@
     - ForwardRef.jsx
 17.useId
     - Index.jsx
-18.PropDrilling.jsx
+18.PropDrilling.jsx - (this file is in src>components>PropDrilling>Parent Component)
 19.ContextApi
     - index.jsx
     - Home.jsx
-
-
-
+    - About.jsx
 
 source.md
+
+
+
+
 
 - In a React application, the ReactDOM.createRoot method is used to create a root container for your
      React  components. ReactDOM.createRoot is a method in React that allows you to create a root for 
@@ -293,6 +295,7 @@ c. Target Phase: The event reaches the target element
 
 
 15.useState Hook:
+- Hooks are reusable functions.
 - in React, state refers to an object that holds data or information about the component.
     (data can be array, string, number, object)
 - The useState Hook can be used to keep track of strings, numbers, booleans, arrays, objects, 
@@ -525,16 +528,17 @@ d. Challenge.jsx
 - It gives a child component a reference to DOM entity created by its parent component in React.
 
 25.useId
--                const id = useId();
+                const id = useId();
 - This hook generates unique IDs i.e, returns a string that is stable across both the server and 
     the client sides.
 - Its primary use case is to generate unique IDs for HTML form elements and ensure that the IDs 
     are always unique in the context of the React application.
 
-26.ContextAPI
-- PropDrilling.jsx
+26.PropDrilling.jsx
 - The React Context API was released in 2018 to avoid prop drilling by simplifying state 
     management and making sharing data across the component tree more efficient and error-free.
+
+27.ContextAPI
 - React Context is a way to manage state globally.
 - It can be used together with the useState Hook to share state between deeply nested components 
     more easily than with useState alone.
@@ -542,6 +546,7 @@ d. Challenge.jsx
         const UserContext = createContext()
 - In order to use the Context in a child component, we need to access it using the useContext Hook.
         import { useState, createContext, useContext } from "react";
+- Call useContext at the top level of your component to read and subscribe to context.
 - The Context API provides a means to share values like state, functions, or any data across 
     the component tree without passing props down manually at every level. 
 
@@ -551,3 +556,13 @@ d. Challenge.jsx
 3. useContext(consumer): A hook that allows you to consume a context 
 
 - we have to pass the main context in useContext 
+- we dont pass inital value directly to context
+
+-Provider Component: The provider is a property of the context component
+
+28.Custom Hook
+- The main reason why you should be using Custom hooks is to maintain the concept of DRY
+    DRY(Don’t Repeat Yourself) in your React apps.
+- Creating a custom hook is the same as creating a JavaScript function whose name starts with “use”. 
+- It can use other hooks inside it, return anything you want it to return,take anything as parameters.
+- e.g useState, useEffect, useContext
