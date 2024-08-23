@@ -39,7 +39,11 @@
     - About.jsx
 20.useReducer
     - IndexReducer.jsx
+21.React.Memo()
+    -ReactMemo.jsx
+    -MemoCount.jsx
 source.md
+
 
 
 
@@ -600,3 +604,15 @@ d. Challenge.jsx
 - Action: An object that describes what you want to do to the state. Usually contains a type
      property and possibly other data.
 - Reducer: A function that takes the current state and an action, and returns the next state.
+
+31.React.Memo()
+- React.memo function is used for memoization of function component.
+- This allows you to avoid unnecessary re-renders, enhancing the performance of your React application.
+- React Memo is a higher-order component (HOC) that wraps around a component to memoize the rendered 
+    output and avoid unnecessary renderings.
+- When deciding to update DOM, React first renders your component, then compares the result with 
+    the previous render. If the render results are different, React updates the DOM.
+
+- Without React.memo, MyComponent would re-render every time its parent component renders, even if 
+    the name prop hasn't changed.
+- With React.memo, MyComponent will only re-render if the name prop changes.
