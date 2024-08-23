@@ -12,7 +12,7 @@
 }
 
 /* this is CSS variables, means if we want to change the color it will aplly all over where this code is used */
-:root {
+/* :root {
   --main-color: #0062ff;
   --supporting-color: #ebf3fe;
   --font-color: #424242;
@@ -24,7 +24,7 @@
   --para-color: #504e4d;
   --bnt-hover-bg-color: #003b99;
   --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
+} */
 
 .logo{
   height: 6em;
@@ -73,7 +73,7 @@ p{
   font-weight: 2rem;
 }
 h1{
-  font-size: 3.2;
+  font-size: 100%;
 }
 
 .container{

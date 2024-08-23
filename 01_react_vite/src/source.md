@@ -37,7 +37,8 @@
     - index.jsx
     - Home.jsx
     - About.jsx
-
+20.useReducer
+    - IndexReducer.jsx
 source.md
 
 
@@ -578,5 +579,24 @@ d. Challenge.jsx
 
 - When a context is passed to use, it works similarly to useContext. 
 - While useContext must be called at the top level of your component, 'use' can be called 
-    inside conditionals like if and loops like for. use is preferred over useContext because 
-    it is more flexible.
+    inside conditionals like if and loops like for.
+- use is preferred over useContext because it is more flexible.
+
+30.useReducer Hook      
+        const [state, dispatch] = useReducer(reducer, initialState);
+
+            reduce(state, action)
+
+- The useReducer() hook is similar to useState(), but is intended for more complex state changes.
+- state: represents the current value and is set to the initialState value during the initial render.
+- dispatch: is a function that updates the state value and always triggers a re-render, just like 
+    the updater function in useState.
+- reducer: is a function that houses all the logic of how the state gets updated. It takes state 
+    and action as arguments and returns the next state.
+- initialState: houses the initial value and can be of any type.
+
+                    reduce(state, action)
+- State: The current state of your component.
+- Action: An object that describes what you want to do to the state. Usually contains a type
+     property and possibly other data.
+- Reducer: A function that takes the current state and an action, and returns the next state.

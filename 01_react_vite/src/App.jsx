@@ -21,6 +21,7 @@ import { FetchApiwithHandlingandError } from "./components/hooks/useEffect/Fetch
 import { HowNotToFetchApi } from "./components/hooks/useEffect/HowNotToFetchApi";
 import { IndexOne } from "./components/hooks/useEffect/IndexOne";
 import { IndexUseId } from "./components/hooks/useID/Index";
+import { IndexReducer } from "./components/hooks/useReducer/IndexReducer";
 import { ForwardRef } from "./components/hooks/useRef/ForwardRef";
 import { IndexuseRef } from "./components/hooks/useRef/IndexuseRef";
 import { Index } from "./components/hooks/useStates";
@@ -64,10 +65,11 @@ export const App = () => {
         {/* <ForwardRef /> */}
         {/* <IndexUseId /> */}
         {/* <ParentComponent /> */}
-        <BioProvider>
+        {/* <BioProvider>
           <Home />
           <About />
-        </BioProvider>
+        </BioProvider> */}
+        <IndexReducer />
       </section>
     )
 }
