@@ -616,3 +616,23 @@ d. Challenge.jsx
 - Without React.memo, MyComponent would re-render every time its parent component renders, even if 
     the name prop hasn't changed.
 - With React.memo, MyComponent will only re-render if the name prop changes.
+
+- if we have to use the memo() property we have to wrap in ().
+
+32.useMemo Hook
+                const memoization = useMemo(() => {
+
+                },[dependencies]);
+- useMemo syntax is almost equal to useEffect.
+- The React useMemo Hook returns a memoized value.
+- The useMemo Hook only runs when one of its dependencies update.
+- The useMemo and useCallback Hooks are similar. The main difference is that useMemo 
+    returns a memoized value and useCallback returns a memoized function.
+- React useMemo() hook is a function that caches the value produced from an expensive function 
+    used inside a React component.
+- An expensive function is typically a resource intensive function that performs heavy and 
+    repetitive computations.
+
+- Memoization 
+- It allows you to cache the results of expensive function calls and re-use the cached result 
+    when the same inputs occur again, rather than recalculating.

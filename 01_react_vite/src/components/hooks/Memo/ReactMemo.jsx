@@ -1,5 +1,5 @@
 import { useState } from "react"
-import MemoCount  from "./MemoCount";
+import {MemoCount}  from "./MemoCount";
 
 export const ReactMemo = () => {
 

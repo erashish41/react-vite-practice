@@ -1,8 +1,8 @@
 import { memo, useRef} from "react";
 
 
-// no need to export on top when using React.Memo()
-const MemoCount = () => {
+// if we using React.Memo() we have to put the Child component in memo("") to run.
+export const MemoCount = memo(() => {
 
     const renderCount = useRef(0);
     return(
@@ -17,6 +17,4 @@ const MemoCount = () => {
             </div>
         </>
     )
-}
-
-export default memo(MemoCount);
+})
