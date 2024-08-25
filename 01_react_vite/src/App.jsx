@@ -72,8 +72,8 @@ export const App = () => {
           <About />
         </BioProvider> */}
         {/* <IndexReducer /> */}
-        {/* <ReactMemo /> */}
-        <MemoParentComponent />
+        <ReactMemo />
+        {/* <MemoParentComponent /> */}
       </section>
     )
 }

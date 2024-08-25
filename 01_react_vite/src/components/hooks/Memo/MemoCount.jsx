@@ -2,7 +2,7 @@ import { memo, useRef} from "react";
 
 
 // if we using React.Memo() we have to put the Child component in memo("") to run.
-export const MemoCount = memo(() => {
+export const MemoCount = memo(({bioData}) => {
 
     const renderCount = useRef(0);
     return(
@@ -13,6 +13,7 @@ export const MemoCount = memo(() => {
                     <span className="text-red-600"> 
                         {renderCount.current ++ } time(s)
                     </span>
+                    <p>Hello, my name is {bioData.userName}</p>
                 </p>
             </div>
         </>
