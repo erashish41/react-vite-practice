@@ -605,7 +605,13 @@ d. Challenge.jsx
      property and possibly other data.
 - Reducer: A function that takes the current state and an action, and returns the next state.
 
-31.React.Memo()
+31.Memoization 
+- It allows you to cache the results of expensive function calls and re-use the cached result 
+    when the same inputs occur again, rather than recalculating.
+
+a. React.Memo()
+- memo will check the reference btw new and previous reference, if same than no change if change
+    than it will re-render.
 - React.memo function is used for memoization of function component.
 - This allows you to avoid unnecessary re-renders, enhancing the performance of your React application.
 - React Memo is a higher-order component (HOC) that wraps around a component to memoize the rendered 
@@ -619,20 +625,77 @@ d. Challenge.jsx
 
 - if we have to use the memo() property we have to wrap in ().
 
-32.useMemo Hook
+b. useMemo() Hook
                 const memoization = useMemo(() => {
 
                 },[dependencies]);
+- The useMemo and useCallback Hooks are similar. The main difference is that useMemo 
+    returns a memoized value and useCallback returns a memoized function.
 - useMemo syntax is almost equal to useEffect.
 - The React useMemo Hook returns a memoized value.
 - The useMemo Hook only runs when one of its dependencies update.
-- The useMemo and useCallback Hooks are similar. The main difference is that useMemo 
-    returns a memoized value and useCallback returns a memoized function.
 - React useMemo() hook is a function that caches the value produced from an expensive function 
     used inside a React component.
 - An expensive function is typically a resource intensive function that performs heavy and 
     repetitive computations.
 
-- Memoization 
-- It allows you to cache the results of expensive function calls and re-use the cached result 
-    when the same inputs occur again, rather than recalculating.
+
+
+
+
+c. UseCallback() Hook
+            const memoization = useMemo(() => {
+
+                },[dependencies]);
+- The useMemo and useCallback Hooks are similar. The main difference is that useMemo 
+    returns a memoized value and useCallback returns a memoized function.
+- One reason to use useCallback is to prevent a component from re-rendering unless its props
+     have changed.
+- useCallback hook to prevent the function from being recreated unless necessary.
+- The useCallback hook is a performance optimization mechanism in React that helps prevent
+     unnecessary re-renders of child components when their parent component re-renders.
+- Passing callbacks as props to child components: When a parent component passes a callback 
+    function as a prop to a child component, and the child component relies on the same callback reference across renders (e.g., for event handlers), useCallback can prevent the child from re-rendering unnecessarily due to a change in the parent's state or props.
+- Callbacks that are expensive to create: If creating the callback function involves
+    complex calculations or fetching data, using useCallback can improve performance by ensuring
+    it's only created when its dependencies change.
+
+
+
+    import { useCallback, useState } from "react"
+
+const Button = ({onClick, children}) => {
+    console.log(`Rendering button: ${children}`);
+    
+    return (
+        <button className= {`text-black mb-4 py-2 px-5
+            ${children === "Increment" ? "bg-green-400" : "bg-red-400"}`} 
+            onClick={onClick}>
+            {children}
+        </button>
+    )
+}
+
+export default function UseCallback() {
+
+    const [count, setCount] = useState(0);
+
+    const increment = useCallback(() => {
+        console.log("increment inside");
+        setCount((prevCount) => prevCount + 1);   
+    }, [])
+
+    const decrement = useCallback(() => {
+        setCount((prevCount) => prevCount - 1);   
+    }, [])   
+
+    return(
+        <div className="p-4 h-lvh font-display tracking-wider flex flex-col justify-end 
+            items-center text-white">
+            <h1 className="mb-4"> Count: {count} </h1>
+            <Button onClick = {increment}>Increment</Button>
+            <Button onClick = {decrement}>Decrement</Button>
+            {/* onClick is props not event and increment/decrement is function not a value */}
+        </div>
+    )
+}

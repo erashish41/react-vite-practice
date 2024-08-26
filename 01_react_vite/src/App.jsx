@@ -11,6 +11,7 @@ import { DerivedState } from "./components/hooks/DerivedState";
 import { DerivedState1 } from "./components/hooks/DerivedState1";
 import { LiftingState } from "./components/hooks/LiftingState";
 import { ReactMemo } from "./components/hooks/Memo/ReactMemo";
+import UseCallback from "./components/hooks/Memo/UseCallback";
 import { MemoParentComponent } from "./components/hooks/Memo/UseMemo";
 import ShortCircuit from "./components/hooks/ShortCircuit";
 import { State } from "./components/hooks/State";
@@ -72,8 +73,9 @@ export const App = () => {
           <About />
         </BioProvider> */}
         {/* <IndexReducer /> */}
-        <ReactMemo />
+        {/* <ReactMemo /> */}
         {/* <MemoParentComponent /> */}
+        <UseCallback />
       </section>
     )
 }
