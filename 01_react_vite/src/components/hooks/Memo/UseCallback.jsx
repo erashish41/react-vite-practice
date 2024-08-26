@@ -1,6 +1,8 @@
 import { useCallback, useState } from "react"
 
-const Button = ({onClick, children}) => {
+// Button component receives two props {onClick, children}
+const Button = ({onClick, children}) =>
+     {
     // console.log(`Rendering button: ${children}`);
     
     return (
@@ -28,10 +30,10 @@ export default function UseCallback() {
     return(
         <div className="p-4 h-lvh font-display tracking-wider flex flex-col justify-end 
             items-center text-white">
-            <h1 className="mb-4"> Count: {count} </h1>
+            <h1 className="mb-4 bg-white"> Count: {count} </h1>
             <Button onClick = {increment}>Increment</Button>
             <Button onClick = {decrement}>Decrement</Button>
             {/* onClick is props not event and increment/decrement is function not a value */}
         </div>
-    )
-}
+    );
+};
